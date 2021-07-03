@@ -1,4 +1,3 @@
-// Code CoordinatesButton Component Here
 import React, {Component} from 'react';
 
 export default class CoordinatesButton extends Component{
@@ -20,3 +19,21 @@ export default class CoordinatesButton extends Component{
         )
     }
 }
+import React, {Component} from 'react';
+
+export default class DelayedButton extends Component{
+    buttonHandler=(event)=>{
+        this.props.onDelayClick(event)
+       const timeOut = setTimeout(this.props.delay)
+    }
+    
+    
+    render(){
+        return(
+<button onClick={this.buttonHandler}>
+Delayer
+</button>
+        )
+    }
+}
+
